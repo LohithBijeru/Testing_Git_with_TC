@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="15.0" key="{F0B7FDC4-9B75-4A69-A860-A23B75D18F43}">
+	<children>
+		<child name="WebStore_CrossPlatform_Sample_Project" key="{3D3F6A77-A8CE-45F4-8420-1696C2D95BD5}" path="WebStore_CrossPlatform_Sample_Project\WebStore_CrossPlatform_Sample_Project.mds" />
+	</children>
+	<testItems key="{FAFA4D04-3C7D-4980-9D35-202E90CBFDB5}">
+		<children>
+			<testItem key="{3D3F6A77-A8CE-45F4-8420-1696C2D95BD5}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{37456385-F3F7-4261-8D39-FAB778D1968B}" />
+	<analysis key="{0B79211E-C027-4CF5-BC70-6E00A3587223}" />
+	<scc key="{C900492B-D218-429C-9AA0-264B7D78CA88}" name="Git Plugin">
+		<data />
+	</scc>
+</Root>
