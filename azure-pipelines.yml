@@ -1,0 +1,26 @@
+trigger:
+- main     # change if needed
+
+pool:
+  name: 'Windows2022'        # your self-hosted agent pool running Windows Server 2022
+
+steps:
+- checkout: self
+
+# === Run TestComplete / TestExecute Test ===
+- task: TestCompleteRunTestPlan@1
+  displayName: "Run TestComplete (Windows Server 2022)"
+  inputs:
+    projectSuite: 'C:\Users\Public\Documents\TestComplete 15 Samples\Desktop\Orders\C#\TCProjects\JavaScript\Orders_C#_JavaScript.pjs'
+    launchType: 'TestExecute'        # Or TestComplete if you're using GUI version
+    logFolder: '$(Build.ArtifactStagingDirectory)\TC_Logs'
+    generateMHT: true                # Optional → MHT report
+    timeout: '900'                   # 15 mins (adjust if needed)
+
+# === Publish Logs as Build Artifacts (Recommended) ===
+- task: PublishBuildArtifacts@1
+  displayName: "Upload TestComplete Logs"
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)\TC_Logs'
+    ArtifactName: 'TestComplete_Logs'
+    publishLocation: 'Container'
